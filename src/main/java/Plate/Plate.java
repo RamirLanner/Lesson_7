@@ -50,25 +50,5 @@ public class Plate {
         System.out.println(this.toString());
     }
 
-    public void putFoodInPlate() {
-        Scanner scanner = new Scanner(System.in);
-        int x = 0;
-        do {
-            System.out.println("Сколько еды положить в тарелку?(целое положительное число)");
-            try {
-                x = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Неверный формат");
-                scanner.nextLine();
-            }
-            if(x >0){
-                this.foodValue+=x;
-                break;
-            }
-            else{
-                System.out.println("Неверный формат");
-            }
-        } while (true);
-    }
 
 }
